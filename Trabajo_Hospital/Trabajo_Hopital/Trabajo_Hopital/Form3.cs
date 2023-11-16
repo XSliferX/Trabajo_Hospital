@@ -12,6 +12,7 @@ namespace Trabajo_Hopital
 {
     public partial class Form3 : Form
     {
+        public event EventHandler<DateTime> FechaSeleccionada;
         public Form3()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace Trabajo_Hopital
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FechaSeleccionada?.Invoke(this, monthCalendar1.SelectionStart);
             this.Close();
         }
     }

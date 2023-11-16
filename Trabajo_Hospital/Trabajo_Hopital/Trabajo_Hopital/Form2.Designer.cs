@@ -72,7 +72,7 @@
             button1.Name = "button1";
             button1.Size = new Size(104, 47);
             button1.TabIndex = 7;
-            button1.Text = "button1";
+            button1.Text = "Volver";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

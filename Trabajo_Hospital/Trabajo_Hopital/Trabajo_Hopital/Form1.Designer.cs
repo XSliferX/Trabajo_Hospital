@@ -39,11 +39,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(290, 45);
+            label1.Location = new Point(308, 44);
             label1.Name = "label1";
-            label1.Size = new Size(134, 20);
+            label1.Size = new Size(97, 20);
             label1.TabIndex = 1;
-            label1.Text = "FORMULARIO 1";
+            label1.Text = "HISTORIAL";
             // 
             // textBox3
             // 
@@ -72,7 +72,7 @@
             button1.Name = "button1";
             button1.Size = new Size(104, 47);
             button1.TabIndex = 7;
-            button1.Text = "button1";
+            button1.Text = "Volver";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

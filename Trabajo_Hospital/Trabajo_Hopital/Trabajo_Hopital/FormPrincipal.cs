@@ -99,7 +99,7 @@ namespace Trabajo_Hopital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form1>();
+            AbrirFormulario<Form4>();
             button1.BackColor = Color.FromArgb(12, 61, 92);
         }
 
@@ -114,6 +114,19 @@ namespace Trabajo_Hopital
             AbrirFormulario<Form3>();
             button3.BackColor = Color.FromArgb(12, 61, 92);
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Form1>();
+            button4.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Form5>();
+            button5.BackColor = Color.FromArgb(12, 61, 92);
+
+        }
+
         #endregion
 
         //METODO PARA ABRIR FORMULARIO DENTRO DEL PANEL
@@ -133,6 +146,16 @@ namespace Trabajo_Hopital
                 formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+
+                // Suscribirse al evento del formulario hijo (Form5 en este caso)
+                if (formulario is Form5 form5)
+                {
+                    form5.AceptarClick += Form5_AceptarClick;
+                }
+                else if (formulario is Form3 form3)
+                {
+                    form3.FechaSeleccionada += Form3_FechaSeleccionada;
+                }
             }
             //si el formulario existe
             else
@@ -140,14 +163,58 @@ namespace Trabajo_Hopital
                 formulario.BringToFront();
             }
         }
+        private void Form3_FechaSeleccionada(object sender, DateTime fecha)
+        {
+            // Mostrar la fecha seleccionada en el lugar que desees
+            MessageBox.Show($"Fecha seleccionada: {fecha.ToShortDateString()}");
+        }
+        // Manejar el evento del formulario hijo (Form5)
+        private void Form5_AceptarClick(object sender, EventArgs e)
+        {
+            // Obtener datos del paciente desde Form5
+            if (sender is Form5 form5)
+            {
+                string nombre = form5.Nombre;
+                string apellidos = form5.Apellidos;
+                string correo = form5.Correo;
+
+                // Mostrar la información en los labels del panel principal
+                label2.Text = $"Nombres: {nombre}";
+                label3.Text = $"Apellidos: {apellidos}";
+                label4.Text = $"Correo: {correo}";
+            }
+        }
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["Form1"]== null)
+            if (Application.OpenForms["Form1"] == null)
                 button1.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form2"] == null)
                 button2.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form3"] == null)
                 button3.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form4"] == null)
+                button4.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form5"] == null)
+                button5.BackColor = Color.FromArgb(4, 41, 68);
+        }
+        private void LimpiarLabelsFormPrincipal()
+        {
+            label2.Text = "Nombres: ";
+            label3.Text = "Apellidos: ";
+            label4.Text = "Correo: ";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Limpiar los datos en los labels del FormPrincipal
+            LimpiarLabelsFormPrincipal();
+
+            // También puedes limpiar los datos en el Form5 si es necesario
+            Form5 form5 = panelformularios.Controls.OfType<Form5>().FirstOrDefault();
+            if (form5 != null)
+            {
+                form5.LimpiarDatos();
+            }
         }
 
     }
