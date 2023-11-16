@@ -100,16 +100,19 @@ namespace Trabajo_Hopital
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Form1>();
+            button1.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Form2>();
+            button2.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form3>();   
+            AbrirFormulario<Form3>();
+            button3.BackColor = Color.FromArgb(12, 61, 92);
         }
         #endregion
 
@@ -129,6 +132,7 @@ namespace Trabajo_Hopital
                 panelformularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             //si el formulario existe
             else
@@ -136,5 +140,15 @@ namespace Trabajo_Hopital
                 formulario.BringToFront();
             }
         }
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Form1"]== null)
+                button1.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form2"] == null)
+                button2.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form3"] == null)
+                button3.BackColor = Color.FromArgb(4, 41, 68);
+        }
+
     }
 }

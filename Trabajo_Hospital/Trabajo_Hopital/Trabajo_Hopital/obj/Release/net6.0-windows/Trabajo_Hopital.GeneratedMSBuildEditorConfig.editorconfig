@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Trabajo_Hopital
-build_property.ProjectDir = C:\Users\cleme\OneDrive\Escritorio\Trabajo_Hospital\Trabajo_Hopital\Trabajo_Hopital\
+build_property.ProjectDir = C:\Users\Alumno\Documents\GitHub\Trabajo_Hospital\Trabajo_Hospital\Trabajo_Hopital\Trabajo_Hopital\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

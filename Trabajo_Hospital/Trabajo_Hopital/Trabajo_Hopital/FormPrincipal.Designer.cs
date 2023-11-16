@@ -40,13 +40,17 @@
             btnMinimizar = new PictureBox();
             btnMaximizar = new PictureBox();
             btnCerrar = new PictureBox();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             panelContenedor.SuspendLayout();
+            panelformularios.SuspendLayout();
             panelMenu.SuspendLayout();
             panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelContenedor
@@ -57,17 +61,21 @@
             panelContenedor.Controls.Add(panelBarraTitulo);
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(0, 0);
+            panelContenedor.Margin = new Padding(3, 2, 3, 2);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1024, 650);
+            panelContenedor.Size = new Size(896, 488);
             panelContenedor.TabIndex = 0;
             // 
             // panelformularios
             // 
             panelformularios.BackColor = SystemColors.Control;
+            panelformularios.Controls.Add(label1);
+            panelformularios.Controls.Add(pictureBox1);
             panelformularios.Dock = DockStyle.Fill;
-            panelformularios.Location = new Point(250, 40);
+            panelformularios.Location = new Point(219, 30);
+            panelformularios.Margin = new Padding(3, 2, 3, 2);
             panelformularios.Name = "panelformularios";
-            panelformularios.Size = new Size(774, 610);
+            panelformularios.Size = new Size(677, 458);
             panelformularios.TabIndex = 2;
             // 
             // panelMenu
@@ -77,16 +85,24 @@
             panelMenu.Controls.Add(button2);
             panelMenu.Controls.Add(button1);
             panelMenu.Dock = DockStyle.Left;
-            panelMenu.Location = new Point(0, 40);
+            panelMenu.Location = new Point(0, 30);
+            panelMenu.Margin = new Padding(3, 2, 3, 2);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(250, 610);
+            panelMenu.Size = new Size(219, 458);
             panelMenu.TabIndex = 1;
             // 
             // button3
             // 
-            button3.Location = new Point(3, 210);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.Gainsboro;
+            button3.Location = new Point(0, 157);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(250, 47);
+            button3.Size = new Size(219, 35);
             button3.TabIndex = 2;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
@@ -94,9 +110,16 @@
             // 
             // button2
             // 
-            button2.Location = new Point(0, 157);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.Gainsboro;
+            button2.Location = new Point(0, 118);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(250, 47);
+            button2.Size = new Size(219, 35);
             button2.TabIndex = 1;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
@@ -104,9 +127,16 @@
             // 
             // button1
             // 
-            button1.Location = new Point(0, 104);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 50, 70);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(12, 61, 92);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.Gainsboro;
+            button1.Location = new Point(0, 78);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(250, 47);
+            button1.Size = new Size(219, 35);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -121,8 +151,9 @@
             panelBarraTitulo.Controls.Add(btnCerrar);
             panelBarraTitulo.Dock = DockStyle.Top;
             panelBarraTitulo.Location = new Point(0, 0);
+            panelBarraTitulo.Margin = new Padding(3, 2, 3, 2);
             panelBarraTitulo.Name = "panelBarraTitulo";
-            panelBarraTitulo.Size = new Size(1024, 40);
+            panelBarraTitulo.Size = new Size(896, 30);
             panelBarraTitulo.TabIndex = 0;
             panelBarraTitulo.MouseMove += panelBarraTitulo_MouseMove;
             // 
@@ -131,9 +162,10 @@
             btnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRestaurar.Cursor = Cursors.Hand;
             btnRestaurar.Image = (Image)resources.GetObject("btnRestaurar.Image");
-            btnRestaurar.Location = new Point(974, 12);
+            btnRestaurar.Location = new Point(852, 9);
+            btnRestaurar.Margin = new Padding(3, 2, 3, 2);
             btnRestaurar.Name = "btnRestaurar";
-            btnRestaurar.Size = new Size(16, 16);
+            btnRestaurar.Size = new Size(14, 12);
             btnRestaurar.SizeMode = PictureBoxSizeMode.Zoom;
             btnRestaurar.TabIndex = 3;
             btnRestaurar.TabStop = false;
@@ -145,9 +177,10 @@
             btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimizar.Cursor = Cursors.Hand;
             btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.Location = new Point(952, 12);
+            btnMinimizar.Location = new Point(833, 9);
+            btnMinimizar.Margin = new Padding(3, 2, 3, 2);
             btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(16, 16);
+            btnMinimizar.Size = new Size(14, 12);
             btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMinimizar.TabIndex = 2;
             btnMinimizar.TabStop = false;
@@ -158,9 +191,10 @@
             btnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximizar.Cursor = Cursors.Hand;
             btnMaximizar.Image = (Image)resources.GetObject("btnMaximizar.Image");
-            btnMaximizar.Location = new Point(974, 12);
+            btnMaximizar.Location = new Point(852, 9);
+            btnMaximizar.Margin = new Padding(3, 2, 3, 2);
             btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.Size = new Size(16, 16);
+            btnMaximizar.Size = new Size(14, 12);
             btnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximizar.TabIndex = 1;
             btnMaximizar.TabStop = false;
@@ -171,32 +205,59 @@
             btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCerrar.Cursor = Cursors.Hand;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(996, 12);
+            btnCerrar.Location = new Point(872, 9);
+            btnCerrar.Margin = new Padding(3, 2, 3, 2);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(16, 16);
+            btnCerrar.Size = new Size(14, 12);
             btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
             btnCerrar.TabIndex = 0;
             btnCerrar.TabStop = false;
             btnCerrar.Click += btnCerrar_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(83, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(496, 346);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Control;
+            label1.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(14, 128, 188);
+            label1.Location = new Point(243, 315);
+            label1.Name = "label1";
+            label1.Size = new Size(196, 31);
+            label1.TabIndex = 1;
+            label1.Text = "Medical Center";
+            // 
             // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1024, 650);
+            ClientSize = new Size(896, 488);
             Controls.Add(panelContenedor);
             FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(650, 400);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(569, 300);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panelContenedor.ResumeLayout(false);
+            panelformularios.ResumeLayout(false);
+            panelformularios.PerformLayout();
             panelMenu.ResumeLayout(false);
             panelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnRestaurar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -213,5 +274,7 @@
         private Button button1;
         private Button button3;
         private Button button2;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

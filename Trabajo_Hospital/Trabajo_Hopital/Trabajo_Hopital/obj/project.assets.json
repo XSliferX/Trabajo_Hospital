@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cleme\\.nuget\\packages\\": {},
+    "C:\\Users\\Alumno\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cleme\\OneDrive\\Escritorio\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\Trabajo_Hopital.csproj",
+      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\GitHub\\Trabajo_Hospital\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\Trabajo_Hopital.csproj",
       "projectName": "Trabajo_Hopital",
-      "projectPath": "C:\\Users\\cleme\\OneDrive\\Escritorio\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\Trabajo_Hopital.csproj",
-      "packagesPath": "C:\\Users\\cleme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cleme\\OneDrive\\Escritorio\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\obj\\",
+      "projectPath": "C:\\Users\\Alumno\\Documents\\GitHub\\Trabajo_Hospital\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\Trabajo_Hopital.csproj",
+      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alumno\\Documents\\GitHub\\Trabajo_Hospital\\Trabajo_Hospital\\Trabajo_Hopital\\Trabajo_Hopital\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cleme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -69,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
